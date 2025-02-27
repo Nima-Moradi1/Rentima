@@ -1,5 +1,5 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 import type { Config } from "tailwindcss";
-import * as twAnimate from 'tailwindcss-animate'
 export default {
     darkMode: ["class"],
     content: [
@@ -51,5 +51,5 @@ export default {
   		}
   	}
   },
-  plugins: [twAnimate],
+  plugins: [require('tailwindcss-animate') , require('daisyui')],
 } satisfies Config;
