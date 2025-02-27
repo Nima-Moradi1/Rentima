@@ -5,8 +5,8 @@ export interface CarsProps {
     name : string , 
     id:string , 
     carAvg : number , 
-    carBrand : 'automatic' | 'manual', 
-    carType : string ,
+    carBrand : string, 
+    carType : 'automatic' | 'manual' ,
     price : number,
     image : {
         url : string
