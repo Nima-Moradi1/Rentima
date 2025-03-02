@@ -4,6 +4,7 @@ import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import Header from "../components/Header";
 import MaxWidthWrapper from "../components/ui/MaxWidthWrapper";
+import QueryClientProvider from "@/providers/QueryClientProvider";
 
 
 const Inter = Outfit({
@@ -28,7 +29,10 @@ export default function RootLayout({
         <body className={`${Inter.variable} antialiased`}>
           <Header />
           <MaxWidthWrapper>
-          {children}
+            <QueryClientProvider>
+            {children}
+            </QueryClientProvider>
+          
           </MaxWidthWrapper>
         </body>
       </html>
